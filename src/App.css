@@ -1,0 +1,382 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:sans-serif; 
+  outline: none;
+}
+
+@font-face {
+   font-family: 'bromello';
+   src: url('font/bromello.woff') format('woff');
+}
+
+
+/*____________HEADER______________*/
+
+header {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 125px;
+   background-color: rgba(102, 189, 136, 1);
+   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+   position: relative;
+   z-index: 10;
+}
+
+.decorationheader {
+   width: 50vw;
+   height: 0;
+   border-left: 5vw solid transparent;
+   border-right: 0 solid transparent;
+   border-top: 125px solid rgba(255, 194, 15, 1);
+
+   position: absolute;
+   right: 0;
+   top: 0px;
+}
+
+h1 {
+   line-height: 70px;
+   color: white;
+   font-size: 40px;
+   position: relative;
+   z-index: 1;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+}
+h1::first-letter{
+   font-size: 50px;
+}
+h1 span {
+   font-size: 50px;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.searchbook {
+   display: flex;
+   position: relative;
+   z-index: 1;
+}
+
+
+
+.searchbutton {
+   width: 35px;
+   height: 35px;
+   background-color: rgba(83, 53, 45, 1);
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   border: none;
+   box-shadow: inset -2px -8px 7px rgba(0, 0, 0, 0.4),
+               inset 2px 8px 7px rgba(255, 194, 15, 0.1);
+}
+.searchbutton:hover {
+   cursor: pointer;
+}
+.searchbutton:active {
+   box-shadow: inset 2px 8px 7px rgba(0, 0, 0, 0.4),
+               inset -2px -8px 7px rgba(255, 194, 15, 0.1);
+}
+.searchinput {
+   display: block;
+   font-size: 14px;
+   color: rgba(77, 77, 77, 1);
+
+   width: 200px;
+   height: 35px;
+
+   margin-left: 3px;
+   padding-left: 10px;
+
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+   border: none;
+}
+.searchinput::placeholder{
+   color: rgba(0, 0, 0, 0.3);
+}
+.searchinput:hover{
+   box-shadow: inset 1px 1px 4px rgba(0, 150, 255, 0.5);
+}
+
+
+/*____________PAGE______________*/
+
+.welcometext{
+   width: 160px;
+   height: 300px;
+   margin-left: -80px;
+   top: 30px;
+   left: 50%;
+   position: absolute;
+   z-index:10;
+    
+    color:rgba(129, 109, 88, 1);
+    font-family: bromello;
+    font-size: 43px;
+    text-align: center;
+    text-shadow: 1px 1px 10px rgba(83, 53, 45, 1);
+}
+
+.searchtext {
+   height: 35px;
+   padding-top: 9px;
+   padding-left: 15vw;
+   color: rgba(77, 77, 77, 0.9);
+   box-shadow:0px 2px 2px rgba(58, 41, 41, 0.3);
+   background-color: white;
+   font-size: 14px;
+   position: relative;
+   
+}
+
+.pagebackground {
+   background-color: rgba(83, 53, 45, 1);
+   padding-bottom: 30px;
+   position: relative;
+  
+   
+}
+
+.page{
+   width: 100%;
+   min-height: 64vh;
+   margin: 0 auto;
+   background-color: rgba(43, 36, 35, 1);
+   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4),
+               -2px 5px 8px rgba(0, 0, 0, 0.4);
+   padding: 60px;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   position: relative;
+   overflow: hidden;
+   
+   
+}
+
+.bookcontainer{
+   width: 280px;
+   height: 370px;
+   padding: 0 49px;
+   line-height: 22px;
+   color: rgba(255, 255, 255, 0.8);
+   margin-bottom: 30px;
+   position: relative;
+}
+.bookcontainer p {
+   font-size: 13px;
+}
+h4{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 400;
+}
+h2{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.cover {
+   background-color: gray;
+   width: 180px;
+   height: 280px;
+   margin: 0px auto 10px auto;
+   box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.6);
+}
+.cover img {
+  height: 100%;
+  width: 100%;
+}
+.cover:hover {
+   cursor: pointer;
+}
+hr {
+   height: 3px;
+   width: 180px;
+   background-color: rgba(0, 0, 0, 0.4);
+   border: none;
+   position: absolute;
+   bottom: 0px;
+}
+
+
+/*____________PAGE BOOK______________*/
+.homebutton {
+   position: relative;
+   z-index:1;
+   width: 90px;
+   height: 35px;
+   background-color: rgba(83, 53, 45, 1);
+   border-radius: 10px;
+   text-align: center;
+   color: white;
+   text-decoration: none;
+   line-height: 35px;
+   box-shadow: inset -3px -8px 7px rgba(0, 0, 0, 0.4),
+               inset 3px 8px 7px rgba(255, 194, 15, 0.1);
+}
+.homebutton:active{
+   box-shadow: inset 3px 8px 7px rgba(0, 0, 0, 0.4),
+               inset -3px -8px 7px rgba(255, 194, 15, 0.1);
+}
+.bookpage {
+   background-color: white;
+   position: relative;
+}
+.coverbookpage {
+   background-color: gray;
+   width: 200px;
+   height: 300px;
+   box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.6);
+   margin-bottom: 50px;
+}
+.coverbookpage img {
+   height: 100%;
+   width: 100%;
+}
+.description {
+   color: rgba(77, 77, 77, 1);
+   line-height: 25px;    
+}
+
+
+
+
+/*____________FOOTER______________*/
+
+footer {
+   padding: 20px 30px 30px 30px;
+   background-color: gray;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 100%;
+}
+
+.logo {
+   display:flex;
+   color: #cccccc;
+   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+.logo img {
+   margin-right: 10px;
+   width: 50px;
+   height: 60px;
+}
+.sdr p {
+   font-family: bromello;
+   font-size: 30px;
+   line-height: 30px;
+}
+.sdr p:first-child {
+  font-size: 25px;
+}
+.wgd {
+  font-size: 13px;
+}
+.footerlinks {
+   text-align: center;
+   margin-top: 10px;
+}
+.footerlinks a {
+   color: #cccccc;
+   text-decoration: none;
+   line-height: 30px;
+}
+.footerlinks a:hover {
+   text-decoration: underline;
+}
+
+
+
+
+
+@media only screen and (min-width: 670px){
+
+ header {
+   height: 100px;
+   display: flex;
+   flex-direction: row;
+ }
+ .decorationheader {
+   width: 70vw;
+   border-right: 5vw solid transparent;
+   border-top: 100px solid rgba(255, 194, 15, 1);
+   right: 15vw;
+ }
+ h1 {
+   margin-top: 8px;
+   margin-left: 4vw;
+   font-size: 50px;
+}
+ h1::first-letter{
+   font-size: 65px;
+}
+ h1 span {
+   font-size: 65px;
+}
+
+.searchbook {
+   margin-left: 10vw;
+   padding-top: 9px;
+}
+
+/*____________PAGE______________*/
+.welcometext{
+   width: 300px;
+   height: 300px;
+   margin-left: -150px;
+   top: 30px;
+   left: 50%;
+
+    font-size: 60px;
+
+}
+
+.page{
+   min-height: 77vh;
+}
+
+/*____________PAGE BOOKL______________*/
+.homebutton {
+   margin-left: 100px;
+   margin-top: 10px;
+}
+
+.bookpage {
+   display: flex;
+   flex-wrap: nowrap;
+}
+.coverbookpage {
+   margin-right: 50px;
+}
+.description {
+   width: 40vw;
+}
+
+
+/*____________FOOTER______________*/
+
+footer {
+   padding: 20px 15vw 30px 15vw;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.footerlinks {
+   text-align: left; 
+}
+}
+
+@media only screen and (min-width: 1000px){
+
+   .searchinput {
+       width: 300px;
+   }
+
+   .page{
+       width: 1000px;
+   }
+
+   .description {
+       width: 600px;
+   }
+}
